@@ -15,21 +15,12 @@ while ( p * p <= n )
             x = p * x;
         }
         q = next(S, q);
-        //if (q == -1) break;
     }
     p = next(S, p);
-    //if (p == -1) break;
 }
 foreach (int i in S)
     Console.WriteLine(i);
 int next(List<int> S, int val)
 {
-    int index = S.BinarySearch(val);
-    //if (index >= 0)
-    //{
-        index += 1;
-        //if (index < S.Count)
-            return S[index];
-    //}
-    //return -1;
+    return S[S.BinarySearch(val) + 1];
 }
